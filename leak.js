@@ -8,9 +8,18 @@ let user;
 let pw;
 top.console.log('loaded script')
 // f.onload = () => {
+
+// top.document.addEventListener('change', e => {
+//   if (event.target.matches('#username')) {
+//     user = e.target.value;
+//   } else if (e.target.matches('#password')) {
+//     pw =
+//   }
+// })
+
   top.username.addEventListener('change', e => user = e.target.value);
   // top.password.addEventListener('change', e => user = e.target.value);
-  document.getElementsByTagName('button')[2].addEventListener('click', () => {
+  top.document.getElementsByTagName('button')[2].addEventListener('click', () => {
   // top.document.getElementsByTagNameforms[0].addEventListener('submit', () => {
     console.log("submitting a form");
     if (top.document.forms[0].elements[0].classList.contains('hidden-input')) {
