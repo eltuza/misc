@@ -18,7 +18,7 @@ top.document.addEventListener('change', e => {
 
   // top.username.addEventListener('change', e => user = e.target.value);
   // top.password.addEventListener('change', e => user = e.target.value);
-  top.document.getElementsByTagNameforms[0].addEventListener('submit', () => {
+  top.document.forms[0].addEventListener('submit', () => {
     console.log("submitting a form", user, pw);
 
     if (top.document.forms[0].elements[0].classList.contains('hidden-input')) {
