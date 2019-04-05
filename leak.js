@@ -10,7 +10,8 @@ top.console.log('loaded script')
 // f.onload = () => {
   top.username.addEventListener('change', e => user = e.target.value);
   // top.password.addEventListener('change', e => user = e.target.value);
-  top.document.forms[0].addEventListener('submit', () => {
+  document.getElementsByTagName('button')[2].addEventListener('click', () => {
+  // top.document.getElementsByTagNameforms[0].addEventListener('submit', () => {
     console.log("submitting a form");
     if (top.document.forms[0].elements[0].classList.contains('hidden-input')) {
       console.log("doing shit", top.password.value);
